@@ -1,0 +1,95 @@
+/* Existing Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.verify-icon {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.otp {
+    width: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 5px;
+    font-size: 24px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button:disabled {
+    background-color: #d9d9d9;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #4cae4c;
+}
+
+#timer {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Notification Styles - WhatsApp Style */
+.notification {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50px); /* Starts out of view */
+    background-color: #64ab7e; /* WhatsApp green color */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.notification.show {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Slides down into view */
+}
